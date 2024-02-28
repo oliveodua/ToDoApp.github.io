@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: mediumslateblue; */
+    background-image: url('getty_514914078_200013332000928076_167571.jpg');
+    background-attachment: fixed;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    color: white;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+.text{
+    position: absolute;
+    right: 20px;
+    top: 3px;
+    color: black;
+    font-size: 15px;
+}
+.text2 {
+    position: absolute;
+    right: 15px;
+    top: 40px;
+    color: rgb(175, 209, 246);
+    font-size: 15px;
+}
+ label {
+     position: absolute;
+     width: 48px;
+     height: 25px;
+     right: 20px;
+     top: 20px;
+     border: 2px solid;
+     border-radius: 20px;
+     box-shadow: 0 0 7px rgb(192, 193, 194);
+ }
+
+ label:before {
+     position: absolute;
+     content: '';
+     width: 20px;
+     height: 20px;
+     left:  0.06rem;
+     top: 0.06rem;
+     border-radius: 50%;
+     background: #211e1e;
+     cursor: pointer;
+     transition: 0.4s ease-in;
+    box-shadow: 0 0 7px rgb(192, 193, 194);
+ }
+
+ label.active:before {
+     left: 24px;
+     background: #fff;
+ }
+
+ body.night {
+     background: #020202;
+     /* background-image: url("./images.png"); */
+     color: #fff;
+ }
+
+header {
+    font-size: 1.5rem;
+}
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    border: none;
+    background: rgb(241, 222, 240);
+    border-radius: 2rem;
+}
+
+
+
+form button {
+    color: rgb(29, 171, 190);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    margin-left: 0.5rem;
+}
+
+form button:hover {
+    color: white;
+    background: rgb(46, 215, 230);
+}
+
+.fa-plus-circle {
+    margin-top: 0.3rem;
+    margin-left: -8px;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    padding-left: 0.5rem;
+    background: rgb(234, 220, 231);
+    color: black;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2rem;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn, 
+.complete-btn {
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.complete-btn {
+    background: rgb(22, 117, 206);
+}
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: rgb(219, 78, 78);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+select {
+    color:rgb(100, 228, 237);
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background:rgb(129, 244, 239);
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select::hover::after {
+    background: white;
+    color: rgb(255, 200, 0);
+}
+
+@media screen and (max-width:460px) {
+
+    body {
+            /* background-color: mediumslateblue; */
+            background-image: url('getty_514914078_200013332000928076_167571.jpg');
+            background-attachment: fixed;
+            /* background-repeat: no-repeat;
+        background-size: cover; */
+            color: white;
+            font-family: "Poppins", sans-serif;
+            min-height: 100vh;
+        }
+        .todo-input{
+            width: 220px;
+            height: 40px;
+            font-size: 16px;
+        }
+  
+    header,
+        form {
+            min-height: 20vh;
+            
+        }
+
+     form input,
+     form button {
+        padding: 5px;
+        padding-left: 10px;
+        font-size: 1rem;
+        border: none;
+        background: rgb(232, 226, 231);
+        border-radius: 2rem;
+      }
+
+     
+
+          .select {
+              margin: 8px;
+              position: relative;
+              overflow: hidden;
+              border-radius: 50px;
+          }
+    
+          select {
+              color: rgb(100, 228, 237);
+              width: 130px;
+              height: 3rem;
+              cursor: pointer;
+              padding: 10px;
+          }
+}
+
+@media screen and (max-width:960px) {
+
+    body {
+        /* background-color: mediumslateblue; */
+        background-image: url('getty_514914078_200013332000928076_167571.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+    }
+
+    header,
+    form {
+        min-height: 20vh;
+
+    }
+
+    form input,
+    form button {
+        padding: 7px;
+        padding-left: 10px;
+        font-size: 1.8rem;
+        border: none;
+        background: rgb(235, 224, 232);
+        border-radius: 2rem;
+    }
+
+   .todo-input {
+       width: 260px;
+       height: 40px;
+       font-size: 16px;
+   }
+
+    .select {
+        margin: 8px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50px;
+    }
+
+    select {
+        color: rgb(100, 228, 237);
+        width: 130px;
+        height: 3rem;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:460px) {
+
+    body {
+        /* background-color: mediumslateblue; */
+        background-image: url('getty_514914078_200013332000928076_167571.jpg');
+        background-attachment: fixed;
+        /* background-repeat: no-repeat;
+        background-size: cover; */
+        color: white;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+    }
+
+    header,
+    form {
+        min-height: 20vh;
+
+    }
+
+    form input,
+    form button {
+        padding: 5px;
+        padding-left: 10px;
+        font-size: 1.8rem;
+        border: none;
+        background: rgb(240, 229, 237);
+        border-radius: 2rem;
+    }
+
+   .todo-input {
+       width: 170px;
+       height: 40px;
+       font-size: 16px;
+   }
+
+    .select {
+        margin: 8px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50px;
+    }
+
+    select {
+        color: rgb(100, 228, 237);
+        width: 130px;
+        height: 3rem;
+        cursor: pointer;
+        padding: 10px;
+    }
+}
